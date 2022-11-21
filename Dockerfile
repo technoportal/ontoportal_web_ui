@@ -11,6 +11,7 @@ RUN apk add --no-cache \
     libxslt-dev \
     mariadb-dev \
     git \
+    less \
     nodejs \
     tzdata \
     yarn \
