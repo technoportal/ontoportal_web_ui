@@ -37,6 +37,8 @@ services:
           memory: "${DOCKER_REDIS_MEMORY:-0}"
     image: "memcached:1.6.17-bullseye"
     profiles: ["cache"]
+    ports:
+      - "11211:11211"
 
   web:
     <<: *default-app
