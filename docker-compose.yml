@@ -29,6 +29,9 @@ services:
     profiles: ["db"]
     ports:
       - "3306:3306"
+    volumes:
+      - db-v:/var/lib/mysql
+
   cache:
     deploy:
       resources:
@@ -47,5 +50,6 @@ services:
     profiles: ["web"]
     command: "yarn build --watch"
 volumes:
+  db-v:
   bundle:
   node:
