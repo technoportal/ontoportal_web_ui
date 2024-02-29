@@ -34,7 +34,7 @@ gem 'haml', '~> 5.1'
 gem 'i18n'
 gem 'iconv'
 gem 'multi_json'
-gem 'mysql2', '0.5.2'
+gem 'mysql2', '0.5.3'
 gem 'oj'
 gem 'open_uri_redirections'
 gem 'pry'
@@ -83,3 +83,6 @@ end
 group :test do
   gem 'capybara'
 end
+
+gem "net-ftp", "~> 0.2.0", require: false
+
