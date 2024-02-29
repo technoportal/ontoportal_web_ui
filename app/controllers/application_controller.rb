@@ -31,10 +31,7 @@ class ApplicationController < ActionController::Base
 
   $trial_license_initialized = false
 
-  if !$EMAIL_EXCEPTIONS.nil? && $EMAIL_EXCEPTIONS == true
-    include ExceptionNotifiable
-  end
-
+ 
   # See ActionController::RequestForgeryProtection for details
   protect_from_forgery
 
