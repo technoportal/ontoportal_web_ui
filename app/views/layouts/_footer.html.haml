@@ -2,15 +2,26 @@
 </div>
 
 %footer.footer.pt-4.mt-5
+  %div.container.d-flex.justify-content-center
+    %h5 POWERED BY
+  %div.container.d-flex.justify-content-center
+    %div.row.d-flex.justify-content-center.align-items-center
+      %div.col-6.col-md
+        %ul.list-unstyled
+          %li= link_to(image_tag("institutions/hes-so.png"), 'https://www.hevs.ch', class: "navbar-brand")
+      %div.col-6.col-md
+        %ul.list-unstyled
+          %li= link_to(image_tag("institutions/ost.png"), 'https://www.ost.ch/', class: "navbar-brand")
+      %div.col-6.col-md
+        %ul.list-unstyled
+          %li= link_to(image_tag("institutions/swissuniversities.png"), 'https://www.swissuniversities.ch/', class: "navbar-brand")
   %div.container
     %div.row
       %div.col-6.col-md
-        %h6 PRODUCTS
+        %h6 
         %ul.list-unstyled
-          %li= link_to('BioPortal', root_path)
-          %li= link_to('BioPortal REST API', Rails.configuration.settings.links[:rest_api], target: '_blank')
-          %li= link_to('BioPortal Virtual Appliance', Rails.configuration.settings.links[:virtual_appliance], target: '_blank')
-          %li= link_to('NCBO Web Widgets', Rails.configuration.settings.links[:widgets], target: '_blank')      
+          %li= link_to('TechnoPortal', root_path)
+          %li= link_to('REST API', Rails.configuration.settings.links[:rest_api], target: '_blank')
       %div.col-6.col-md.footer-support
         %h6 SUPPORT
         %ul.list-unstyled
@@ -36,24 +47,7 @@
           %li.list-inline-item
             = link_to(Rails.configuration.settings.links[:github], target: '_blank') do
               %i.fab.fa-2x.fa-github
-    %div.row.legal-text
-      %div.col
-        = t('.grant_html')
-    %div.row.pt-2.legal-text
-      %div.col
-        = t('.copyright_html')
-    %div.row.pt-2
-      %div.col
-        %ul.list-inline
-          %li.list-inline-item
-            = link_to('CITE US', Rails.configuration.settings.links[:cite], target: '_blank')
-          %li.list-inline-item
-            %i.fas.fa-ellipsis-v{"aria-hidden" => "true"}
-          %li.list-inline-item
-            = link_to('PRIVACY POLICY', Rails.configuration.settings.links[:privacy_policy],  target: '_blank')
-          %li.list-inline-item
-            %i.fas.fa-ellipsis-v{"aria-hidden" => "true"}
-          %li.list-inline-item
-            = link_to('TERMS', Rails.configuration.settings.links[:terms], target: '_blank')
+  
+    
 
 = javascript_include_tag "application"
