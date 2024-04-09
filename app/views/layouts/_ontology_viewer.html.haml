@@ -150,11 +150,6 @@
             %div.tab-pane{id: "ont_widgets_content", role: "tabpanel", aria: {labelledby: "ont-widgets-tab"}}
               - if content_section.eql?("widgets")
                 = yield
-
-- if Rails.env.appliance?
-  = render partial: "footer_appliance"
-  = javascript_include_tag "application"
-- else
   = render partial: "layouts/footer"
 
 </body>
