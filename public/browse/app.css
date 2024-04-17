@@ -46,11 +46,16 @@
   margin-top: 1em;
 }
 .new_ontology_button {
-  display: inline-block;
-  width: 100%;
-  padding-left: 0px !important;
-  padding-right: 0px !important;
-  margin-top: 1em;
+  border-color: #9C4E81 !important;
+  background: rgba(0, 0, 0, 0) !important;
+  font-family: inherit !important; 
+  font-size: 1.2em !important;
+  color:  #9C4E81 !important;
+}
+
+.new_ontology_button:hover {
+  background: #9C4E81 !important;
+  color:  #ffffff !important;
 }
 .facet {
   margin: 1em 0;
