@@ -39,6 +39,7 @@ class OntologiesController < ApplicationController
   include ActionView::Helpers::NumberHelper
   include OntologiesHelper
   def index
+    @title = 'Ontologies'
     @app_name = "FacetedBrowsing"
     @app_dir = "/browse"
     @base_path = @app_dir

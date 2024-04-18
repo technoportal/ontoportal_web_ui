@@ -46,15 +46,15 @@
   margin-top: 1em;
 }
 .new_ontology_button {
-  border-color: #9C4E81 !important;
+  border-color: var(--primary-color) !important;
   background: rgba(0, 0, 0, 0) !important;
   font-family: inherit !important; 
   font-size: 1.2em !important;
-  color:  #9C4E81 !important;
+  color:  var(--primary-color) !important;
 }
 
 .new_ontology_button:hover {
-  background: #9C4E81 !important;
+  background: var(--primary-color) !important;
   color:  #ffffff !important;
 }
 .facet {
@@ -166,7 +166,7 @@
   max-width: 120px;
   height: 45px;
   max-height: 45px;
-  border: solid #234979 thin;
+  border: solid var(--primary-color) thin;
 }
 .ontology_badge:hover {
   cursor: pointer;
@@ -175,14 +175,14 @@
   border-radius: 4px 4px 0 0;
   font-size: 12px;
   color: white;
-  background-color: #234979;
+  background-color: var(--primary-color);
 }
 .badge_count {
   border-radius: 0 0 4px 4px;
   height: 22px;
   font-size: 1.1em;
   font-weight: bold;
-  color: #234979;
+  color: var(--primary-color);
 }
 .ontology_badge:hover .badge_count {
   background-color: rgba(220, 235, 255, 0.79);
