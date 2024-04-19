@@ -47,9 +47,10 @@
           <span class="ui-button-text">Submit New Ontology</span>
         </a>
       <%end%>
+      <p class=filters-title>Filters</p>
 
       <div id="ont_view_facet" class="facet">
-        <h4>Entry Type</h4>
+        <h5>Entry Type</h5>
         <div class="checkbox_list">
           <span ng-repeat="type in types | toArray | orderBy:'sort'">
             <input type="checkbox" checklist-model="facets.types.active" checklist-value="type.id" id="include_{{type.id}}" name="include_{{type.id}}" ng-disabled="!facet_counts['types'][type.id]">
@@ -63,7 +64,7 @@
       </div>
 
       <div id="upload_date_facet" class="facet">
-        <h4>Uploaded in the Last</h4>
+        <h5>Uploaded in the Last</h5>
         <div class="checkbox_list">
           <select ng-model="facets.upload_date.active" ng-change="ontologySortOrder('-creationDate')">
             <option ng-repeat="day in facets.upload_date.day_text" value="{{facets.upload_date.values[day]}}">
@@ -74,7 +75,7 @@
       </div>
 
       <div id="category_facet" class="facet">
-        <h4>Category</h4>
+        <h5>Category</h5>
         <div class="checkbox_list">
           <span ng-repeat="category in categories">
             <input type="checkbox" checklist-model="facets.categories.active" checklist-value="category.id" name="category" id="category_{{category.acronym}}" ng-disabled="!facet_counts['categories'][category.id]">
@@ -86,7 +87,7 @@
       </div>
 
       <div id="group_facet" class="facet">
-        <h4>Group</h4>
+        <h5>Group</h5>
         <div class="checkbox_list">
           <span ng-repeat="group in groups">
             <input type="checkbox" checklist-model="facets.groups.active" checklist-value="group.id" name="group" id="group_{{group.acronym}}" ng-disabled="!facet_counts['groups'][group.id]">
@@ -98,7 +99,7 @@
       </div>
 
       <div id="format_facet" class="facet">
-        <h4>Format</h4>
+        <h5>Format</h5>
         <div class="checkbox_list">
           <span ng-repeat="format in formats">
             <input type="checkbox" checklist-model="facets.formats.active" checklist-value="format" name="format" id="format_{{format}}" ng-disabled="!facet_counts['formats'][format]">
@@ -110,7 +111,7 @@
       </div>
 
       <div id="missing_status_facet" class="facet admin" ng-show="admin">
-        <h4>Missing Status</h4>
+        <h5>Missing Status</h5>
         <div class="checkbox_list">
           <select ng-model="facets.missing_status.active">
             <option ng-repeat="status in facets.missing_status.values" value="{{status}}">
@@ -121,7 +122,7 @@
       </div>
 
       <div id="admin_facet" class="facet admin" ng-show="admin">
-        <h4>Admin Only</h4>
+        <h5>Admin Only</h5>
         <div class="checkbox_list">
           <span ng-repeat="artifact in artifacts">
             <input type="checkbox" checklist-model="facets.artifacts.active" checklist-value="artifact" name="artifact" id="artifact_{{artifact}}" ng-disabled="!facet_counts['artifacts'][artifact]">
@@ -135,27 +136,26 @@
     </div>
 
     <div id="ontologies" class="grid-80">
-      <div id="searching">
+      <div class="browse-search">
         <input type="text" placeholder="Search&hellip;" ng-model="searchText" ng-model-options="{debounce: 100}" class="search">
-      </div>
 
-      <div id="sorting" ng-show="visible_ont_count" style="margin-bottom: 2em;">
-        <div id="sorting_float">
-          <span style="padding: 7px 7px 4px;" id="visible_ont_count">Showing {{visible_ont_count}} of {{ontologies.length}}</span>
-          <label for="sort_order">Sort:</label>
-          <select ng-model="ontology_sort_order">
-            <option value="-popularity" selected="selected">Popular</option>
-            <option value="name">Name</option>
-            <option value="-class_count">Classes count</option>
-            <option value="-individual_count">Instances/Concepts count</option>
-            <option value="-project_count">Projects</option>
-            <option value="-note_count">Notes</option>
-            <option value="-creationDate">Upload Date</option>
-            <option value="-search_rank" ng-show="searchText.length > 0">Search Rank</option>
-          </select>
+        <div id="sorting" ng-show="visible_ont_count" style="margin-bottom: 2em;">
+          <div id="sorting_float">
+            <label for="sort_order">Sort:</label>
+            <select ng-model="ontology_sort_order">
+              <option value="-popularity" selected="selected">Popular</option>
+              <option value="name">Name</option>
+              <option value="-class_count">Classes count</option>
+              <option value="-individual_count">Instances/Concepts count</option>
+              <option value="-project_count">Projects</option>
+              <option value="-note_count">Notes</option>
+              <option value="-creationDate">Upload Date</option>
+              <option value="-search_rank" ng-show="searchText.length > 0">Search Rank</option>
+            </select>
+          </div>
         </div>
       </div>
-
+       <span style="padding: 7px 7px 4px;" id="visible_ont_count">Showing {{visible_ont_count}} of {{ontologies.length}}</span>
       <div class="ontology" ng-show="visible_ont_count == 0" style="border: solid thin lightGray;">
         <div style="text-align: center; color: gray; height: 2em; padding: 4em;">
           <h2 style="font-weight: normal;">No matches!</h2>

@@ -30,27 +30,69 @@
   float: right;
   left: -33%;
 }
-.search {
-  float: left;
-  width: 150px;
-  padding: 2px 4px 1px;
-  margin-top: -5px;
-  width: 200px;
+
+/* Search bar of the Ontologies page*/
+
+.browse-search{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
+
+.search {
+  flex-grow: 1;
+  padding: 20px 20px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  border-radius: 4px;
+  box-shadow: lightgray 0px 6px 15px;
+  border: none;
+}
+
+.search:focus {
+  outline: none;
+  border: 2px solid var(--primary-color);
+}
+
+#sorting_float {
+  margin-bottom: 10px;
+  
+ }
+
+#sorting_float select {
+  margin-left: 10px;
+  padding: 16px;
+  box-shadow: lightgray 0px 6px 15px;
+  border: none;
+}
+
+/* Filters title */
+
+.filters-title {
+  font-size: 16px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 12px;
+  text-decoration-color: var(--primary-color);
+}
+
+
 .smaller {
   color: gray;
   font-size: .8em;
   padding-bottom: 2px;
 }
-#facets {
-  margin-top: 1em;
-}
+
 .new_ontology_button {
   border-color: var(--primary-color) !important;
   background: rgba(0, 0, 0, 0) !important;
   font-family: inherit !important; 
   font-size: 1.2em !important;
   color:  var(--primary-color) !important;
+
 }
 
 .new_ontology_button:hover {
@@ -59,9 +101,11 @@
 }
 .facet {
   margin: 1em 0;
-  border: thin lightGray solid;
+  border: 1px solid lightgray;
   padding: 5px;
   border-radius: 3px;
+  box-shadow:rgba(100,100,111,0.08) 0 7px 29px 0;
+
 }
 .facet_disabled {
   color: gray;
@@ -78,12 +122,7 @@
   width: 200px;
   display: block;
 }
-#sorting {
-}
-#sorting_float {
-  float: right;
-  margin-bottom: .5em;
-}
+
 @keyframes highlight {
   0% {
     background: yellow;

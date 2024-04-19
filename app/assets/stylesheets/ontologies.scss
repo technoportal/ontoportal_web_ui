@@ -43,7 +43,7 @@ $ont-show-bg-color: #e9ecef;
     color: #6c757d;
  
     &:hover {
-      color: #0056b3;
+      color: var(--primary-color);
       text-decoration: none;
     }
   }
