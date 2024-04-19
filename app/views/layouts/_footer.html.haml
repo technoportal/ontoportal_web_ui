@@ -3,16 +3,16 @@
 
 %footer.footer.pt-4.mt-5
   %div.container.d-flex.justify-content-center
-    %h5 POWERED BY
+    %h5 BROUGHT TO YOU BY
   %div.container.d-flex.justify-content-center
     %div.row.d-flex.justify-content-center.align-items-center
-      %div.col-6.col-md
+      %div.col-6.col-sm
         %ul.list-unstyled
           %li= link_to(image_tag("institutions/hes-so_white.svg"), 'https://www.hevs.ch', class: "navbar-brand")
-      %div.col-6.col-md
+      %div.col-6.col-sm
         %ul.list-unstyled
           %li= link_to(image_tag("institutions/ost.svg"), 'https://www.ost.ch/', class: "navbar-brand")
-      %div.col-6.col-md
+      %div.col-6.col-sm
         %ul.list-unstyled
           %li= link_to(image_tag("institutions/swissuniversities.svg"), 'https://www.swissuniversities.ch/', class: "navbar-brand")
   %div.container
@@ -39,11 +39,8 @@
         %h6 CONNECT
         %ul.list-inline
           %li.list-inline-item
-            = link_to(Rails.configuration.settings.links[:root_path], target: '_blank') do 
-              %i.fab.fa-2x.fa-facebook-f
-          %li.list-inline-item
             = link_to(Rails.configuration.settings.links[:root_path], target: '_blank') do
-              %i.fab.fa-2x.fa-twitter
+              %i.fa.fa-envelope{style: "font-size:31px"}
           %li.list-inline-item
             = link_to(Rails.configuration.settings.links[:github], target: '_blank') do
               %i.fab.fa-2x.fa-github
