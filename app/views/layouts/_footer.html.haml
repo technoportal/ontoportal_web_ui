@@ -35,6 +35,11 @@
           %li= link_to(raw('Mission & Vision'), Rails.configuration.settings.links[:root_path], target: '_blank')
           %li= link_to('Team', Rails.configuration.settings.links[:root_path], target: '_blank')
           %li= link_to('Projects', projects_path)
+      %div.col-6.col-md
+        %h6 AGREEMENTS
+        %ul.list-unstyled
+          %li= link_to('Terms and Conditions', Rails.configuration.settings.links[:root_path], target: '_blank')
+          %li= link_to('Privacy Policy', Rails.configuration.settings.links[:root_path], target: '_blank')
       %div.col-12.col-md
         %h6 CONNECT
         %ul.list-inline
