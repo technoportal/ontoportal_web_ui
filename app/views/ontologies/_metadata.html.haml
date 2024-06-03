@@ -35,7 +35,7 @@
           %td Format
           %td= @submission_latest.hasOntologyLanguage
         %tr
-          %td Contact
+          %td= @submission_latest.contact.length() > 1 ? "Authors" : "Author"
           %td= raw @submission_latest.contact.map {|c| [c.name, c.email].join(", ") if c.member?(:name) && c.member?(:email)}.join("<br/>")
       - categories_hash = LinkedData::Client::Models::Category.all_to_hash
       - categories = @ontology.hasDomain

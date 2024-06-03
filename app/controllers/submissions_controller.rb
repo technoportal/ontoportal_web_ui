@@ -27,7 +27,7 @@ class SubmissionsController < ApplicationController
       if @errors && @errors[:uploadFilePath]
         @errors = ["Please specify the location of your ontology"]
       elsif @errors && @errors[:contact]
-        @errors = ["Please enter a contact"]
+        @errors = ["Please add an author"]
       end
 
       render "new"
