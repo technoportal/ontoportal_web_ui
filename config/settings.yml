@@ -1,6 +1,6 @@
 shared:
   links:
-    about: 'https://www.bioontology.org/about-us/'
+    about: 'https://technoportal.github.io/about-us/'
     cite: 'https://www.bioontology.org/about-us/#cite-bioportal'
     facebook: 'https://www.facebook.com/National-Center-for-Biomedical-Ontology-127444774011153/'
     support_mail: 'mailto:technoportal-support@hevs.ch'
@@ -16,13 +16,14 @@ shared:
     mission: 'https://www.bioontology.org/about-us/#mission'
     privacy_policy: 'https://technoportal.github.io#privacy-policy'
     rest_api: 'https://data.technoportal.hevs.ch'
-    team: 'https://www.bioontology.org/about-us/#team'
+    team: 'https://technoportal.github.io/about-us/#team'
     terms: 'https://www.bioontology.org/terms/'
     terms_and_conditions: 'https://technoportal.github.io/'
     twitter: 'http://twitter.com/bioontology'
     virtual_appliance: 'https://ontoportal.github.io/documentation/administration'
     widgets: 'http://www.bioontology.org/wiki/NCBO_Widgets'
     wiki: 'https://www.bioontology.org/wiki/'
+    documentation: 'https://wedowind.gitbook.io/ontoforge/technoportal'
 
 development:
   links:
